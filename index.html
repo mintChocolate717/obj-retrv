@@ -42,7 +42,7 @@
   .pill { font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; padding: 7px 18px; border: 1px solid var(--rule); border-radius: 999px; color: var(--fg-faint); cursor: default; }
 
   /* Parts, subsections, empty content cards */
-  main { max-width: var(--measure); margin: 0 auto; padding: 0 20px 96px; }
+  main { max-width: var(--measure); margin: 0 auto; padding: 0 20px 24px; }
   .part { border-top: 1px solid var(--rule); padding: 56px 0 16px; }
   .part__eyebrow { margin: 0 0 6px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); }
   .part__title { margin: 0 0 32px; font-size: 2rem; font-weight: 400; line-height: 1.2; }
@@ -54,6 +54,13 @@
   .card--code { min-height: 96px; margin: 0; padding: 16px 18px; overflow-x: auto; font-family: var(--mono); font-size: 14px; }
   .part > .card { margin-bottom: 40px; }
 
+  /* Footer with the design credit */
+  .foot { max-width: var(--measure); margin: 0 auto; padding: 0 20px 48px; }
+  .foot__inner { border-top: 1px solid var(--rule); padding-top: 28px; text-align: center; font-size: 15px; color: var(--fg-muted); }
+  .foot__inner p { margin: 0; }
+  .foot__inner a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(180, 84, 15, 0.35); }
+  .foot__inner a:hover { border-bottom-color: var(--accent); }
+
   @media (max-width: 640px) {
     body { font-size: 17px; }
     .nav__brand { display: none; }
@@ -61,7 +68,8 @@
     .nav__links { margin-left: 0; gap: 12px; }
     .nav__links a { font-size: 11px; letter-spacing: 0.04em; }
     .hero { padding: 56px 16px 44px; }
-    main { padding: 0 16px 64px; }
+    main { padding: 0 16px 16px; }
+    .foot { padding: 0 16px 40px; }
     .part { padding-top: 44px; }
     .part__title { font-size: 1.6rem; }
   }
@@ -152,6 +160,12 @@
   </section>
 
 </main>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <p>Page layout inspired by the <a href="https://flex-pi.github.io/">Flex-π</a> project page.</p>
+  </div>
+</footer>
 
 </body>
 </html>
